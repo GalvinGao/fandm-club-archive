@@ -9,13 +9,14 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: `Club Archive — Club Council`,
+    description: `An archive of the clubs at Franklin & Marshall College from 2008-2021.`,
+    author: `@galvingao`,
+    siteUrl: `https://fandm.edu/`,
   },
   plugins: [
-    `gatsby-plugin-image`,
+    "gatsby-plugin-postcss",
+    "gatsby-plugin-image",
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -31,12 +32,40 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
+        background_color: `#163a6d`,
         // This will impact how browsers show your PWA/website
         // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#663399`,
+        // theme_color: `#163a6d`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `static/images/logo-square.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-source-mysql`,
+      options: {
+        connectionDetails: {
+          host: "127.0.0.1",
+          user: "root",
+          password: "root",
+          database: "clubcouncilold",
+        },
+        queries: [
+          {
+            statement: "SELECT * FROM club",
+            idFieldName: "id",
+            name: "clubs",
+          },
+          {
+            statement: "SELECT * FROM budgetitems",
+            idFieldName: "id",
+            name: "budgetItems",
+          },
+          {
+            statement: "SELECT * FROM usermapping",
+            idFieldName: "name",
+            name: "userMappings",
+          },
+        ],
       },
     },
   ],

@@ -6,26 +6,16 @@
  */
 
 import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
+const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
+    <div className="container py-8 px-4 mx-auto print:pt-0">
+      <Header />
+      <main className="px-4">{children}</main>
+      {/* <div
         style={{
           margin: `0 auto`,
           maxWidth: `var(--size-content)`,
@@ -43,8 +33,8 @@ const Layout = ({ children }) => {
           {` `}
           <a href="https://www.gatsbyjs.com">Gatsby</a>
         </footer>
-      </div>
-    </>
+      </div> */}
+    </div>
   )
 }
 
