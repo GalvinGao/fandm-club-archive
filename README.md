@@ -10,6 +10,8 @@
 
 This is the Old Budget Site Archive project for the Franklin & Marshall College Club Council. The project is built with Gatsby and is both rendered as PDFs and is ready to be hosted.
 
+The Old Budget Site Archive project was an initiative of Club Council during the 2022-2023 Academic Year.
+
 ## Prerequisites
 
 - Node.js 18 or higher; see [Node.js](https://nodejs.org/en/download/) for installation instructions.
