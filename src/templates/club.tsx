@@ -119,7 +119,7 @@ const Footer: React.FC<{
   club: ReturnType<typeof remapClubDataset>
   buildTime: string
 }> = ({ club, buildTime }) => (
-  <code className="text-[12px] text-zinc-600 py-4 px-4 border-[thin] border-solid border-zinc-400 mt-4 flex flex-col gap-4">
+  <code className="text-[12px] text-zinc-600 py-4 px-4 border-[thin] border-solid border-zinc-400 mt-4 flex flex-col gap-4 break-inside-avoid-page">
     <div className="text-xl font-semibold tracking-tighter flex items-center justify-between">
       <span>Technical Information</span>
 
@@ -135,8 +135,9 @@ const Footer: React.FC<{
       {club.budgetItems.map(item => item.mysqlId).join(", ")}.
     </div>
     <div>
-      Club Archive Project is developed by Club Council Representative Galvin
-      Gao '26.
+      The Old Budget Site Archive project was an initiative of Club Council
+      during the 2022-2023 Academic Year. This document was developed by Club
+      Council Representative Galvin Gao '26.
     </div>
     <div>
       Source code of this project is available on GitHub at{" "}

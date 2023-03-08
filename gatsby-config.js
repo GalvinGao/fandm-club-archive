@@ -9,7 +9,7 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Club Archive — Club Council`,
+    title: `Old Budget Site Archive — Club Council`,
     description: `An archive of the clubs at Franklin & Marshall College from 2008-2021.`,
     author: `@galvingao`,
     siteUrl: `https://fandm.edu/`,

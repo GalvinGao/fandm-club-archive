@@ -18,7 +18,8 @@ async function renderPageToPDF(url: string) {
     el => el.textContent?.trim() || ""
   )
   // clean clubName so it can be used as a filename
-  const cleanClubName = "/Club Archive — " + clubName.replace(/\/|:|\?/g, "-")
+  const cleanClubName =
+    "/Old Budget Site Archive — " + clubName.replace(/\/|:|\?/g, "-")
 
   const path = cleanClubName ?? new URL(url).pathname.replace(/\/$/, "")
   await page.pdf({
@@ -45,7 +46,6 @@ async function renderPageToPDF(url: string) {
   })
 
   console.log(`Rendered ./output${path}.pdf`)
-  await browser.close()
 }
 
 const renderProd = async () => {

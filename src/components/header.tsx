@@ -15,7 +15,7 @@ const Header = () => (
         className="w-24 translate-y-0.5"
       />
       <div className="text-4xl ml-4 tracking-tight font-light">
-        Club Archive
+        Old Budget Site Archive
       </div>
     </OptLink>
 

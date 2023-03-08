@@ -5,10 +5,10 @@
   </a>
 </p>
 <h1 align="center">
-  Club Archive
+  Old Budget Site Archive
 </h1>
 
-This is the Club Archive project for the Franklin & Marshall College Club Council. The project is built with Gatsby and is both rendered as PDFs and is ready to be hosted.
+This is the Old Budget Site Archive project for the Franklin & Marshall College Club Council. The project is built with Gatsby and is both rendered as PDFs and is ready to be hosted.
 
 ## Prerequisites
 
